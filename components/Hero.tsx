@@ -42,7 +42,7 @@ export default function Hero() {
 
           Oetewe <br />
 
-          <span className="text-[#DAD7CD]">
+          <span className="block text-2xl sm:text-3xl md:text-5xl text-[#DAD7CD] mt-2">
             Outdoor Exploration Trekkers We
           </span>
 

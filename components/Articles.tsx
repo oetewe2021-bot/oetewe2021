@@ -52,7 +52,7 @@ export default function Articles() {
 
             <div
              key={index}
-             className="group min-w-[85%] md:min-w-0 bg-[#E9EDDC] rounded-[30px] overflow-hidden shadow-lg hover:-translate-y-2 transition duration-500 snap-center"
+             className="group min-w-[85%] md:min-w-0 bg-[#E9EDDC] rounded-[30px] overflow-hidden shadow-lg hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 snap-center"
             >
 
               {/* Image */}

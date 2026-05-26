@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 import { FaBars, FaTimes } from "react-icons/fa"
 
@@ -21,8 +22,8 @@ export default function Navbar() {
           <Image
           src="/images/logo.png"
           alt="Logo"
-          width={70}
-          height={70}
+          width={60}
+          height={60}
           style={{
           width: "auto",
           height: "auto",
@@ -63,7 +64,7 @@ export default function Navbar() {
         {/* Desktop Button */}
         <div className="hidden md:block">
 
-          <button className="bg-[#5F6F52] text-white px-8 py-4 rounded-full tracking-[0.15em] text-sm font-semibold hover:bg-[#4F5D44] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <button className="bg-[#5F6F52] text-white px-10 py-4 rounded-full tracking-[0.12em] text-sm font-semibold whitespace-nowrap hover:bg-[#4F5D44] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
             JOIN COMMUNITY
           </button>
 
@@ -80,9 +81,17 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
+      <AnimatePresence>
+
       {menuOpen && (
 
-        <div className="md:hidden bg-[#344E41]/95 backdrop-blur-lg px-6 py-8">
+        <motion.div
+  initial={{ opacity: 0, y: -30 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: -20 }}
+  transition={{ duration: 0.3 }}
+  className="md:hidden bg-[#344E41]/95 backdrop-blur-lg px-6 py-8"
+>
 
           <ul className="flex flex-col gap-6 text-white text-lg font-medium">
 
@@ -112,15 +121,17 @@ export default function Navbar() {
 
           </ul>
 
-          <button className="bg-[#5F6F52] text-white px-8 py-4 rounded-full tracking-[0.15em] text-sm font-semibold hover:bg-[#4F5D44] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <button className="w-full mt-6 bg-[#5F6F52] text-white py-4 rounded-full tracking-[0.15em] text-sm font-semibold hover:bg-[#4F5D44] transition-all duration-300 shadow-lg">
 
             JOIN COMMUNITY
 
           </button>
 
-        </div>
+        </motion.div>
 
       )}
+
+</AnimatePresence>
 
     </nav>
   )
