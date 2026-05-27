@@ -52,63 +52,63 @@ const images = [
   },
 
   {
-    src: "/images/g1.jpg",
+    src: "/images/gbr1.JPG",
     title: "Sunrise Hiking",
     location: "Dolok Tinggi Raja",
     size: "small",
   },
 
   {
-    src: "/images/g2.jpg",
+    src: "/images/gbr2.JPG",
     title: "Adventure Camp",
     location: "Samosir",
     size: "large",
   },
 
   {
-    src: "/images/g3.jpg",
+    src: "/images/gbr3.JPG",
     title: "Forest Trail",
     location: "Tangkahan",
     size: "small",
   },
 
   {
-    src: "/images/g4.jpg",
+    src: "/images/gbr4.JPG",
     title: "Hidden Paradise",
     location: "Air Terjun Sipiso Piso",
     size: "tall",
   },
 
   {
-    src: "/images/g5.jpg",
+    src: "/images/gbr5.JPG",
     title: "Nature Journey",
     location: "Bukit Kubu",
     size: "large",
   },
 
   {
-    src: "/images/g6.jpg",
+    src: "/images/gbr6.JPG",
     title: "Camping Moment",
     location: "Paropo",
     size: "large",
   },
 
   {
-    src: "/images/g7.jpg",
+    src: "/images/gbr7.JPG",
     title: "Outdoor Experience",
     location: "Gunung Sinabung",
     size: "small",
   },
 
   {
-    src: "/images/g8.jpg",
+    src: "/images/gbr8.JPG",
     title: "Wild Escape",
     location: "Sibolangit Forest",
     size: "tall",
   },
 
   {
-    src: "/images/g9.jpg",
+    src: "/images/gbr9.JPG",
     title: "Explore Nature",
     location: "North Sumatra",
     size: "tall",
