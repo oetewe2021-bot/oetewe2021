@@ -4,11 +4,12 @@ import { motion } from "framer-motion"
 export default function About() {
   return (
     <motion.section
+    id="tentang"
   initial={{ opacity: 0, y: 80 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
   viewport={{ once: true }}
-  className="py-28 bg-[#F4F1EA] px-6"
+  className="scroll-mt-32 py-28 bg-[#F4F1EA] px-6"
 >
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">

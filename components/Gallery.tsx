@@ -1,13 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
-
+import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
-
-import {
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa"
 
 const images = [
   "/images/gallery1.png",
@@ -19,30 +13,57 @@ const images = [
 ]
 
 export default function Gallery() {
-
-  const [current, setCurrent] = useState(0)
-
-  const nextSlide = () => {
-    if (current < images.length - 3) {
-      setCurrent(current + 1)
-    }
-  }
-
-  const prevSlide = () => {
-    if (current > 0) {
-      setCurrent(current - 1)
-    }
-  }
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   return (
-    <motion.section
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  viewport={{ once: true }}
-  className="py-28 bg-[#F4F1EA] px-6"
->
 
+  <>
+    <AnimatePresence>
+
+  {selectedImage && (
+
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-md flex items-center justify-center px-6"
+      onClick={() => setSelectedImage(null)}
+    >
+
+      {/* Image */}
+      <motion.img
+        initial={{ scale: 0.85, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.85, opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        src={selectedImage}
+        alt="Preview"
+        className="max-w-full max-h-[90vh] rounded-[24px] shadow-2xl object-cover"
+      />
+
+      {/* Close Button */}
+      <button
+        onClick={() => setSelectedImage(null)}
+        className="absolute top-6 right-6 text-white text-5xl leading-none hover:scale-110 transition"
+      >
+
+        ×
+
+      </button>
+
+    </motion.div>
+
+  )}
+
+</AnimatePresence>
+    <motion.section
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="py-28 bg-[#F4F1EA] px-6"
+    >
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
@@ -58,67 +79,52 @@ export default function Gallery() {
 
         </div>
 
-        {/* Slider */}
-        <div className="relative">
+        {/* Horizontal Gallery */}
+        <div
+          className="
+            flex gap-6 overflow-x-auto
+            scroll-smooth snap-x snap-mandatory
+            pb-4
+          "
+        >
 
-          {/* Images */}
-          <div
-            className="flex gap-6 transition-transform duration-700 ease-in-out"
-            style={{
-              transform: `translateX(-${current * 34}%)`,
-            }}
-          >
+          {images.map((image, index) => (
 
-            {images.map((image, index) => (
+            <div
+              key={index}
+              className="
+                min-w-[85%]
+                md:min-w-[32%]
+                snap-center
+              "
+            >
 
               <div
-                key={index}
-                className="min-w-full md:min-w-[31%]"
-              >
+  onClick={() => setSelectedImage(image)}
+  className="group relative overflow-hidden rounded-[28px] h-[260px] md:h-[380px] shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 cursor-pointer"
+>
 
-                <div className="relative overflow-hidden rounded-[28px] h-[260px] md:h-[380px] shadow-xl group">
+                {/* Image */}
+                <img
+                  src={image}
+                  alt="Gallery"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
 
-                  <img
-                    src={image}
-                    alt="Gallery"
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                  />
-
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition duration-500" />
-
-                </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition duration-500" />
 
               </div>
 
-            ))}
+            </div>
 
-          </div>
-
-          {/* Left Button */}
-          <button
-            onClick={prevSlide}
-            className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-11 h-11 rounded-full flex items-center justify-center backdrop-blur-md transition duration-300"
-          >
-
-            <FaChevronLeft />
-
-          </button>
-
-          {/* Right Button */}
-          <button
-            onClick={nextSlide}
-            className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-11 h-11 rounded-full flex items-center justify-center backdrop-blur-md transition duration-300"
-          >
-
-            <FaChevronRight />
-
-          </button>
+          ))}
 
         </div>
 
       </div>
-
     </motion.section>
+  </>
   )
 }
+

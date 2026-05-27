@@ -2,6 +2,7 @@ import "./globals.css"
 
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import PageTransition from "@/components/PageTransition"
 
 export const metadata = {
   title: "Oetewe",
@@ -19,7 +20,11 @@ export default function RootLayout({
 
         <Navbar />
 
-        {children}
+        <PageTransition>
+
+  {children}
+
+</PageTransition>
 
         <Footer />
 
@@ -27,3 +32,4 @@ export default function RootLayout({
     </html>
   )
 }
+
