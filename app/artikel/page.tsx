@@ -17,7 +17,7 @@ export default function About() {
         <div className="relative overflow-hidden rounded-[32px] shadow-2xl">
 
           <img
-            src="/images/pulau.jpg"
+            src="/images/pulau.JPG"
             alt="About Community"
             className="w-full h-[500px] object-cover"
           />

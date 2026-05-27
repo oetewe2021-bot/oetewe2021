@@ -120,7 +120,7 @@ const containerVariants: Variants = {
 
   visible: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.08,
     },
   },
 }
@@ -138,8 +138,7 @@ const cardVariants: Variants = {
     scale: 1,
 
     transition: {
-      duration: 0.8,
-      ease: "easeOut",
+      duration: 0.7,
     },
   },
 }
@@ -222,6 +221,7 @@ export default function GalleryPage() {
               <img
                 src={image.src}
                 alt={image.title}
+                loading="lazy"
                 className={`w-full object-cover transition duration-700 group-hover:scale-110 ${
                   image.size === "tall"
                     ? "h-[520px]"
