@@ -12,21 +12,21 @@ const images = [
   {
     src: "/images/gallery1.png",
     title: "Camping Under The Stars",
-    location: "Sibolangit",
+    location: "Sibolga",
     size: "tall",
   },
 
   {
     src: "/images/gallery2.jpeg",
-    title: "Mountain Journey",
-    location: "Gunung Sibayak",
+    title: "Cool Water",
+    location: "Landak River",
     size: "large",
   },
 
   {
     src: "/images/gallery3.jpeg",
     title: "Forest Exploration",
-    location: "Bukit Lawang",
+    location: "Pinus di Barus",
     size: "small",
   },
 
@@ -40,7 +40,7 @@ const images = [
   {
     src: "/images/gallery5.jpeg",
     title: "Nature Escape",
-    location: "Berastagi",
+    location: "Trip ke 22",
     size: "tall",
   },
 
@@ -61,49 +61,49 @@ const images = [
   {
     src: "/images/gbr2.JPG",
     title: "Adventure Camp",
-    location: "Samosir",
+    location: "Barus",
     size: "large",
   },
 
   {
     src: "/images/gbr3.JPG",
     title: "Forest Trail",
-    location: "Tangkahan",
+    location: "Sunrise di Barus",
     size: "small",
   },
 
   {
     src: "/images/gbr4.JPG",
     title: "Hidden Paradise",
-    location: "Air Terjun Sipiso Piso",
+    location: "Laut Batu Bara",
     size: "tall",
   },
 
   {
     src: "/images/gbr5.JPG",
     title: "Nature Journey",
-    location: "Bukit Kubu",
+    location: "Pulau Salah Nama",
     size: "large",
   },
 
   {
     src: "/images/gbr6.JPG",
-    title: "Camping Moment",
-    location: "Paropo",
+    title: "sea of tranquility",
+    location: "Pulau Pandang",
     size: "large",
   },
 
   {
     src: "/images/gbr7.JPG",
     title: "Outdoor Experience",
-    location: "Gunung Sinabung",
+    location: "Pesona Pulau Pandang",
     size: "small",
   },
 
   {
     src: "/images/gbr8.JPG",
     title: "Wild Escape",
-    location: "Sibolangit Forest",
+    location: "Fishing Moment",
     size: "tall",
   },
 
