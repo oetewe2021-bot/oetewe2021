@@ -247,42 +247,57 @@ export default function TentangPage() {
           </motion.div>
 
           {/* Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            {values.map((value, index) => (
+  {values.map((value, index) => (
 
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.7,
-                  delay: index * 0.1,
-                }}
-                viewport={{ once: true }}
-                className="bg-white rounded-[30px] p-10 shadow-xl hover:-translate-y-3 transition duration-500"
-              >
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.7,
+        delay: index * 0.1,
+      }}
+      viewport={{ once: true }}
+      className="group relative overflow-hidden rounded-[32px] bg-white/80 backdrop-blur-xl border border-white/40 p-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)] hover:-translate-y-3 hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-500"
+    >
 
-                <div className="w-14 h-14 rounded-full bg-[#5F6F52] mb-8" />
+      {/* Top Accent */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-[#5F6F52] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-                <h3 className="text-2xl font-bold text-[#344E41] mb-5">
+      {/* Small Label */}
+      <p className="uppercase tracking-[0.25em] text-xs text-[#5F6F52] mb-5">
 
-                  {value.title}
+        {index === 0
+          ? "Philosophy"
+          : index === 1
+          ? "Community"
+          : index === 2
+          ? "Journey"
+          : "Protection"}
 
-                </h3>
+      </p>
 
-                <p className="text-gray-600 leading-relaxed">
+      {/* Title */}
+      <h3 className="text-3xl font-bold text-[#344E41] mb-5 leading-tight">
 
-                  {value.description}
+        {value.title}
 
-                </p>
+      </h3>
 
-              </motion.div>
+      {/* Description */}
+      <p className="text-gray-600 leading-relaxed text-lg">
 
-            ))}
+        {value.description}
 
-          </div>
+      </p>
 
+    </motion.div>
+
+  ))}
+
+</div>
         </div>
 
       </section>
