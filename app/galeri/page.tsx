@@ -1,6 +1,11 @@
 "use client"
 
-import { motion, AnimatePresence } from "framer-motion"
+import {
+  motion,
+  AnimatePresence,
+  Variants,
+} from "framer-motion"
+
 import { useState } from "react"
 
 const images = [
@@ -10,84 +15,98 @@ const images = [
     location: "Sibolangit",
     size: "tall",
   },
+
   {
     src: "/images/gallery2.jpeg",
     title: "Mountain Journey",
     location: "Gunung Sibayak",
     size: "large",
   },
+
   {
     src: "/images/gallery3.jpeg",
     title: "Forest Exploration",
     location: "Bukit Lawang",
     size: "small",
   },
+
   {
     src: "/images/gallery4.jpeg",
     title: "Morning Adventure",
     location: "Danau Toba",
     size: "large",
   },
+
   {
     src: "/images/gallery5.jpeg",
     title: "Nature Escape",
     location: "Berastagi",
     size: "tall",
   },
+
   {
     src: "/images/gallery6.jpeg",
     title: "Wild Camping",
     location: "Sumatera Utara",
     size: "large",
   },
+
   {
     src: "/images/g1.jpg",
     title: "Sunrise Hiking",
     location: "Dolok Tinggi Raja",
     size: "small",
   },
+
   {
     src: "/images/g2.jpg",
     title: "Adventure Camp",
     location: "Samosir",
     size: "large",
   },
+
   {
     src: "/images/g3.jpg",
     title: "Forest Trail",
     location: "Tangkahan",
     size: "small",
   },
+
   {
     src: "/images/g4.jpg",
     title: "Hidden Paradise",
     location: "Air Terjun Sipiso Piso",
     size: "tall",
   },
+
   {
     src: "/images/g5.jpg",
     title: "Nature Journey",
     location: "Bukit Kubu",
     size: "large",
   },
+
   {
     src: "/images/g6.jpg",
     title: "Camping Moment",
     location: "Paropo",
     size: "large",
   },
+
   {
     src: "/images/g7.jpg",
     title: "Outdoor Experience",
     location: "Gunung Sinabung",
     size: "small",
   },
+
   {
     src: "/images/g8.jpg",
     title: "Wild Escape",
     location: "Sibolangit Forest",
     size: "tall",
   },
+
   {
     src: "/images/g9.jpg",
     title: "Explore Nature",
@@ -96,8 +115,9 @@ const images = [
   },
 ]
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
+
   visible: {
     transition: {
       staggerChildren: 0.12,
@@ -105,16 +125,18 @@ const containerVariants = {
   },
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 60,
     scale: 0.96,
   },
+
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
+
     transition: {
       duration: 0.8,
       ease: "easeOut",
