@@ -22,9 +22,9 @@ export default function RootLayout({
 
         <PageTransition>
 
-  {children}
+        {children}
 
-</PageTransition>
+        </PageTransition>
 
         <Footer />
 
