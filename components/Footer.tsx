@@ -37,7 +37,7 @@ export default function Footer() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com/oetewe"
+              href="https://instagram.com/oetewe2021"
               target="_blank"
               className="hover:text-[#A3B18A] transition duration-300"
             >
@@ -46,7 +46,7 @@ export default function Footer() {
 
             {/* Facebook */}
             <a
-              href="https://facebook.com/oetewe"
+              href="https://www.facebook.com/share/1KbY1Npbxo/"
               target="_blank"
               className="hover:text-[#A3B18A] transition duration-300"
             >
@@ -55,7 +55,7 @@ export default function Footer() {
 
             {/* YouTube */}
             <a
-              href="https://youtube.com/"
+              href="https://youtube.com/@oetewe2021"
               target="_blank"
               className="hover:text-[#A3B18A] transition duration-300"
             >
@@ -64,7 +64,7 @@ export default function Footer() {
 
             {/* TikTok */}
             <a
-              href="https://tiktok.com/@oetewe"
+              href="https://tiktok.com/@oetewe_2021"
               target="_blank"
               className="hover:text-[#A3B18A] transition duration-300"
             >

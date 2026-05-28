@@ -22,7 +22,7 @@ const activities = [
 
   {
     title: "Forest Adventure",
-    image: "/images/g3.jpg",
+    image: "/images/gbr3.JPG",
     location: "Tangkahan",
     description:
       "Perjalanan menyusuri hutan dan menikmati suasana alam yang masih alami.",
@@ -290,7 +290,7 @@ export default function KegiatanPage() {
       <section className="relative h-[85vh] flex items-center justify-center">
 
         <img
-          src="/images/gallery1.png"
+          src="/images/gbr10.jpeg"
           alt="Adventure"
           className="absolute inset-0 w-full h-full object-cover"
         />
