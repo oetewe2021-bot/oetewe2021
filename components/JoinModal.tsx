@@ -33,7 +33,10 @@ export default function JoinModal({
 
   const handleSubmit = () => {
 
-    const message = `Halo Admin Oetewe Community
+  const subject =
+    `Pendaftaran Anggota Baru - ${formData.nama}`
+
+  const body = `Halo Admin Oetewe Community,
 
 Saya ingin bergabung ke komunitas.
 
@@ -53,15 +56,17 @@ ${formData.whatsapp}
 Alasan Bergabung:
 ${formData.alasan}
 
-━━━━━━━━━━`
+━━━━━━━━━━
 
-    const whatsappUrl =
-      `https://wa.me/6282272197795?text=${encodeURIComponent(message)}`
+Terima kasih.`
 
-    window.open(whatsappUrl, "_blank")
-    onClose()
+  const mailtoLink =
+    `mailto:oetewe2021@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-  }
+  window.location.href = mailtoLink
+
+  onClose()
+}
 
   return (
 
