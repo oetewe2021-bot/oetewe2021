@@ -3,14 +3,9 @@
 import { motion } from "framer-motion"
 const events = [
   {
-    date: "12 JUN",
-    title: "Camping Bersama Danau Toba",
-    location: "Sumatera Utara",
-  },
-  {
-    date: "24 JUL",
-    title: "Pendakian Gunung Sibayak",
-    location: "Berastagi",
+    date: "18 JUL",
+    title: "Oetewe Peduli",
+    location: "Kabupaten Batu Bara",
   },
   {
     date: "15 AUG",
