@@ -132,7 +132,7 @@ Terima kasih.`
                 top-4
                 right-5
                 text-3xl
-                text-gray-500
+                text-gray-700
                 hover:text-black
                 transition
               "
@@ -157,7 +157,7 @@ Terima kasih.`
 
               </h2>
 
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+              <p className="text-gray-800 leading-relaxed text-sm md:text-base">
 
                 Isi data diri terlebih dahulu sebelum bergabung
                 dengan komunitas Oetewe Community.
@@ -183,6 +183,7 @@ Terima kasih.`
                   py-3
                   outline-none
                   focus:border-[#5F6F52]
+                  placeholder:text-gray-500
                 "
               />
 
@@ -200,6 +201,7 @@ Terima kasih.`
                   py-3
                   outline-none
                   focus:border-[#5F6F52]
+                  placeholder:text-gray-500
                 "
               />
 
@@ -217,6 +219,7 @@ Terima kasih.`
                   py-3
                   outline-none
                   focus:border-[#5F6F52]
+                  placeholder:text-gray-500
                 "
               />
 
@@ -235,6 +238,7 @@ Terima kasih.`
                   outline-none
                   resize-none
                   focus:border-[#5F6F52]
+                  placeholder:text-gray-500
                 "
               />
 
