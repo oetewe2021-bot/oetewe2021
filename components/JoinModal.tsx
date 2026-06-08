@@ -183,7 +183,8 @@ Terima kasih.`
                   py-3
                   outline-none
                   focus:border-[#5F6F52]
-                  placeholder:text-gray-500
+                  placeholder:text-gray-700
+                  placeholder:font-medium
                 "
               />
 
@@ -201,7 +202,8 @@ Terima kasih.`
                   py-3
                   outline-none
                   focus:border-[#5F6F52]
-                  placeholder:text-gray-500
+                  placeholder:text-gray-700
+                  placeholder:font-medium
                 "
               />
 
@@ -219,7 +221,8 @@ Terima kasih.`
                   py-3
                   outline-none
                   focus:border-[#5F6F52]
-                  placeholder:text-gray-500
+                  placeholder:text-gray-700
+                  placeholder:font-medium
                 "
               />
 
@@ -238,7 +241,8 @@ Terima kasih.`
                   outline-none
                   resize-none
                   focus:border-[#5F6F52]
-                  placeholder:text-gray-500
+                  placeholder:text-gray-700
+                  placeholder:font-medium
                 "
               />
 
