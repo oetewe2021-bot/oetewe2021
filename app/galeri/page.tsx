@@ -10,6 +10,47 @@ import { useState } from "react"
 
 const images = [
   {
+  src: "/images/p1.JPG",
+  title: "Oetewe Peduli",
+  location: "Panti Asuhan ATHOHIRIAH",
+  size: "large",
+},
+
+{
+  src: "/images/p2.JPG",
+  title: "Berbagi Bersama",
+  location: "Panti Asuhan ATHOHIRIAH",
+  size: "small",
+},
+
+{
+  src: "/images/p3.JPG",
+  title: "Oetewe Peduli",
+  location: "Panti Asuhan ATHOHIRIAH",
+  size: "large",
+},
+
+{
+  src: "/images/p4.JPG",
+  title: "Oetewe Peduli",
+  location: "Panti Asuhan ATHOHIRIAH",
+  size: "small",
+},
+
+{
+  src: "/images/p5.JPG",
+  title: "Berbagi Bersama",
+  location: "Panti Asuhan ATHOHIRIAH",
+  size: "large",
+},
+
+{
+  src: "/images/p6.JPG",
+  title: "Oetewe Peduli",
+  location: "Panti Asuhan ATHOHIRIAH",
+  size: "large",
+},
+  {
     src: "/images/gallery1.png",
     title: "Camping Under The Stars",
     location: "Sibolga",

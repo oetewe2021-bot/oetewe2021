@@ -1,18 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-const events = [
-  {
-    date: "18 JUL",
-    title: "Oetewe Peduli",
-    location: "Kabupaten Batu Bara",
-  },
-  {
-    date: "15 AUG",
-    title: "Forest Camp & Survival Training",
-    location: "Bukit Lawang",
-  },
-]
+import Link from "next/link"
+import { events } from "@/lib/events"
 
 export default function Events() {
   return (
@@ -80,11 +70,12 @@ export default function Events() {
               </p>
 
               {/* Button */}
-              <button className="bg-[#5F6F52] text-white px-8 py-4 rounded-full tracking-[0.15em] text-sm font-semibold hover:bg-[#4F5D44] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-
-                DETAIL EVENT
-
-              </button>
+              <Link
+  href={`/event/${event.slug}`}
+  className="bg-[#5F6F52] text-white px-8 py-4 rounded-full tracking-[0.15em] text-sm font-semibold hover:bg-[#4F5D44] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl text-center"
+>
+  DETAIL EVENT
+</Link>
 
             </div>
 

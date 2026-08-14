@@ -66,7 +66,7 @@ export default function KegiatanPage() {
         <div className="absolute inset-0">
 
           <img
-            src="/images/g8.jpg"
+            src="/images/gbr11.jpeg"
             alt="Kegiatan Oetewe"
             className="w-full h-full object-cover"
           />

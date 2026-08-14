@@ -1,10 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
+
 export default function About() {
   return (
     <motion.section
-    id="tentang"
   initial={{ opacity: 0, y: 80 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
@@ -51,11 +52,12 @@ export default function About() {
 
           </p>
 
-          <button className="bg-[#5F6F52] text-white px-8 py-4 rounded-full tracking-[0.15em] text-sm font-semibold hover:bg-[#4F5D44] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-
-            EXPLORE MORE
-
-          </button>
+          <Link
+  href="/tentang"
+  className="inline-block bg-[#5F6F52] text-white px-8 py-4 rounded-full tracking-[0.15em] text-sm font-semibold hover:bg-[#4F5D44] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
+>
+  EXPLORE MORE
+</Link>
 
         </div>
 

@@ -4,6 +4,15 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
 const images = [
+
+  // Oetewe Peduli
+  "/images/p1.JPG",
+  "/images/p2.JPG",
+  "/images/p3.JPG",
+  "/images/p4.JPG",
+  "/images/p5.JPG",
+  "/images/p6.JPG",
+  // Gallery
   "/images/gallery1.png",
   "/images/gallery2.jpeg",
   "/images/gallery3.jpeg",
@@ -16,9 +25,9 @@ const images = [
   "/images/gbr4.JPG",
   "/images/gbr5.JPG",
   "/images/gbr6.JPG",
-"/images/gbr7.JPG",
-"/images/gbr8.JPG",
-"/images/gbr9.JPG",
+  "/images/gbr7.JPG",
+  "/images/gbr8.JPG",
+  "/images/gbr9.JPG",
 ]
 
 export default function Gallery() {
